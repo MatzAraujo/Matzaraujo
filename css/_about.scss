@@ -1,0 +1,19 @@
+#about{
+    margin: 0;
+
+    .image{
+        position: relative;
+        
+    }
+
+    .text {
+        h2{
+            margin-top: 2rem;
+        }
+        p{
+            font: 400 1rem 'DM Sans';
+            margin-top: 1rem;
+            color: $text-color;
+        }
+    }
+}

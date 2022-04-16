@@ -1,0 +1,98 @@
+nav{
+    @include flex;
+}
+
+.logo{
+    font: 700 1.31rem 'Poppins',sans-serif;
+    color: $tittle-color;
+    span{
+        color: $base-color;
+    }
+}
+
+nav .menu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+    height: 100vh;
+    width:100vw;
+    background: $body-color;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    place-content:center;
+
+    display: grid;
+    place-content:center;
+    text-align: center;
+
+    transition: 0.2s;
+
+    ul.grid{
+        gap: 4rem;
+        place-content: center;
+    }
+    
+}
+
+nav .menu{
+    ul{
+        li{
+            a{
+                transition: 0.2s color;
+                position: relative;
+                transition: color 0.2s;
+
+                &:hover{
+                    color: $base-color
+                }
+                    //aplica o hover na cor dos links
+
+                &::after{
+                    content: '';
+                    height: 2px;
+                    width: 0%;
+                    background: $base-color;
+
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    transition: 0.2s width ;
+                }
+
+                &:hover{
+                    &::after{
+                       width:100%;
+                    }
+                }
+                    //aplica o hover embaixo dos links,gerando uma barra abaixo deles 
+            }
+        }
+    }
+}
+
+.toggle{
+    color: $base-color;
+    font-size: 1.5rem;
+}
+
+.toggle.icon-close{
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav.show .toggle.icon-close{
+    opacity: 1;
+    visibility: visible;
+    
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+}

@@ -1,59 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms 2</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nlw project</title>
+    
+      <!-- STYLES -->
+    <link rel="stylesheet" href="css/main.css"/>
 
-</head>
+      <!--ICONS-->
+    <link rel="stylesheet" href="assets/style.css">
 
- <body>
+      <!-- FONTS -->
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <header>
-        <div id="tittle">
-            <h1>Marketing</h1>
-            <h1>Creativo</h1>
-        </div>
-        <!--tittle-->
+  </head>
 
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#" id="menu-btn">Ja tem uma conta?</a></li>           
-             </ul>
-        </nav>
+  <body>
+    <header id="header">
+      <nav class="container">
+        <a href="#" class="logo">Beauty<span>salon</span>.</a>
+        <div class="menu">
+            
+          <ul class="grid">
+            <li><a class="tittle" href="#home">Início</a></li>
+            <li><a class="tittle" href="#about">Sobre</a></li>
+            <li><a class="tittle" href="#services">Serviços</a></li>
+            <li><a class="tittle" href="#testimonials">Depoimentos</a></li>
+            <li><a class="tittle" href="#contact">Contato</a></li>
+        </ul>
 
+        </div> <!--Menu Header-->
+        <div class=" toggle icon-menu"></div> <!--Open menu-->
+        <div class=" toggle icon-close"></div> <!--Close menu-->
+      </nav>
     </header>
 
     <main>
-        <aside>
+      <section class="section" id="home">
+        <div class="container grid">
+            <div class="image">
+                <img src="assets/cabelereira(p).png" />
+            </div> <!--imagem-->
+          <div class="texts">
+            <h2 class="tittle">Saúde natural para os seus cabelos</h2>
+            <p class="text">
+              Um salão exclusivo em São Paulo,especializado em tratamentos
+              naturais
+            </p>
+            <a class="btn" href="#">Agendar um horário</a>
+          </div>
+          <!--p and h1-->
+        </div>
+        <!--container grid-->
+      </section>
 
-         <h2><span>Inscrevá-se agora</span></h2>
-         <h2>na Newslatter</h2>
+      <div class="divider-1"></div>
+      <!--divider 1 Gradient-->
 
+     <section class="section" id="about">
+       <div class="container grid">
+          <div class="image">
+            <img src="assets/Img (7).png" alt="">
+          </div>
+          <div class="texts"></div>
+          <h2 class="tittle">Sobre nós.</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae ea cum nulla rerum eligendi minus nobis ipsam. Suscipit, odit rerum?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod provident modi tempora, maiores blanditiis placeat expedita ullam laudantium nisi!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, porro velit? Consectetur, quod expedita, eos, in neque cumque nemo enim nesciunt iure suscipit quos officiis nihil? Accusantium nesciunt voluptates sapiente.</p>
+       </div> <!--About-->
+     </section>
 
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit laborum aliquam distinctio deleniti minus officia repellat earum quis, enim assumenda? </p>
-            
+     <div class="divider-2"></div>
 
-         <form>
-             <input type="text" placeholder="Nome">
-             <input type="email" placeholder="E-mail">
-             <input id="send" type="submit" value="Enviar>">
-         </form>
+     <section class="section" id="services">
+       <div class="container grid">
+        <div class="texts">
+          <h2 class="tittle">Serviços</h2>
+          
 
-        </aside>
+          
+          <p>Com mais de 10 anos no mercado, o <span>Beautysalon</span>  já conquistou clientes de inúmeros países com seus tratamentos exclusivos e totalmente naturais</p>
+        </div>
+          <div class="cards">
 
-        <article>
-            <img src="assets/77d0a7c454e658833800528e748edbe9.png">
-        </article>
+            <div class="card">
+              <i class="icon-woman-hair"></i>
+              <h3 class="tittle">Terapia capilar</h3>
+              <p>Terapia completa para couro cabeludo e fios, protegendo todos os tipos de cabelos, inclusive os longos e finos.</p>
+            </div>
 
+            <div class="card">
+              <i class="icon-trim"></i>
+              <h3 class="tittle">Cortes</h3>
+              <p>A nossa equipe é repleta de profissionais renomados, famosos por lançarem tendências com cortes diferenciados e clássicos.</p>
+            </div>
+
+            <div class="card">
+              <i class="icon-shampoo"></i>
+              <h3 class="tittle">tratamentos</h3>
+              <p>O beautysalon conta com diversos tratamentos naturais e totalmente veganos, para qualquer tipo 
+                de cabelo.</p>
+            </div>
+
+          </div> <!--Cards-->
+       </div> <!--services-->
+     </section>
+     
+     <div class="divider-1"></div>
+
+     <section class="section" id="testimonials">
+       <div class="container grid">
+         <h2 class="tittle">Depoimentos de quem passou por aqui</h2>
+       </div>
+     </section>
     </main>
 
- </body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
