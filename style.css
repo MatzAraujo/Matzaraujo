@@ -123,6 +123,8 @@ header .logo{
     background:url(/assets/png/134216_menu_lines_hamburger_icon.png);
     background-repeat: no-repeat;
     background-position: center;
+        
+    cursor:pointer;    
 }
 
 
@@ -141,6 +143,8 @@ header .logo{
     background:url(/assets/png/cancel.png);
     background-repeat: no-repeat;
     background-position: center;
+        
+     cursor:pointer;       
 }
 
 
