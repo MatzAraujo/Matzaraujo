@@ -1,60 +1,277 @@
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?gs8tau');
-  src:  url('fonts/icomoon.eot?gs8tau#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?gs8tau') format('truetype'),
-    url('fonts/icomoon.woff?gs8tau') format('woff'),
-    url('fonts/icomoon.svg?gs8tau#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* RESETS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    overflow: hidden;
 }
 
-.icon-phone:before {
-  content: "\e900";
+a{
+    text-decoration: none;
 }
-.icon-close:before {
-  content: "\e901";
+
+ul{
+    list-style: none;
 }
-.icon-menu:before {
-  content: "\e902";
+
+:root{
+    --primary-color:#dec0f1;
+    
+} 
+
+
+    /* LAYOUT    */
+
+.container{
+    position: absolute;
+    right: 0;
+
+    min-height: 100vh;
+    width: 100%;  
+    padding: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: skyblue;
+    color: #fff;
+    z-index: 2;
+
+    transition: .2s;
 }
-.icon-whatsapp:before {
-  content: "\e903";
+
+
+
+.container header{
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   width: 100%;
+   padding: 40px 100px;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   z-index: 1000;
 }
-.icon-location:before {
-  content: "\e904";
+
+header .logo{
+    font: 700 24px 'Poppins';
+    color: #dec0f1;
+    text-transform: uppercase;   
+    cursor:pointer;
 }
-.icon-facebook:before {
-  content: "\e905";
+.container video{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    object-fit: cover;
+
+    opacity: 0.8;
 }
-.icon-play:before {
-  content: "\e906";
+
+            /* OVERLAY ANIMATION */
+
+.overlay{
+    /* animation: gradient 10s ease-in-out alternate infinite; */
+    
+    background: linear-gradient(to right,#4568DC,#B06AB3);
+    background-size: 300% 300%;    
+    
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;  
 }
-.icon-woman-hair:before {
-  content: "\e907";
+
+@keyframes gradient{
+   from{
+        background-position: 0% 50%;
+    }
+
+    to{
+        background-position: 100% 50%;
+    }
+            
+    /* acaba definindo uma transição no background alterando o gradiente de cores infinitamente   */
+
 }
-.icon-trim:before {
-  content: "\e908";
+
+                /* TOGGLE MENU */
+
+.toggle{
+    height: 62px;
+    width: 62px;
+
+    background:url(/assets/png/134216_menu_lines_hamburger_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
-.icon-hair-clipper:before {
-  content: "\e909";
+
+
+
+                /* SHOW */
+
+.container.show{
+    right: 300px;
 }
-.icon-shampoo:before {
-  content: "\e90a";
+                
+
+.toggle.show{
+    height: 62px;
+    width: 62px;
+
+    background:url(/assets/png/cancel.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+
+
+
+.menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 300px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #202026;
+   
+}
+
+.menu ul li{
+    margin: 20px;
+}
+
+.menu ul li a{
+    font: 500 22px 'DM Sans';
+     color: #fff;
+    
+     transition: .2s color;
+     position: relative;
+}
+
+.menu ul li a:hover{
+    color: #B06AB3;
+}
+
+.menu ul li a::after{
+    content: '';
+    height: 2px;
+    width: 00%;
+
+    background: #B06AB3;
+
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+
+    transition: .2s width;
+}
+
+.menu ul li a:hover::after{
+    width: 100%;
+}
+
+
+
+                /* TEXTS     */
+
+.text{
+    position: relative;
+    z-index: 10;
+}
+
+.text .tittle{
+    font:700 50px 'Poppins';
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+.text .sub-tittle{
+    font:700 30px 'Poppins';
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+ 
+
+
+.text p{
+    font: 500 20px 'DM Sans';
+    max-width: 700px;
+}
+
+                /* BUTTON */
+
+.text .button{
+    font: 700 20px 'DM Sans';
+    margin-top: 30px;
+    padding: 10px 20px;
+
+    display: inline-block;
+    
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    border-radius: 15px;
+    background: transparent;
+    color: #fff;
+
+    transition:background .2s;
+}
+
+.text .button:hover{
+   background: var(--primary-color);
+}   
+
+                /* SOCIAL */
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.social li {
+    padding: 0 40px;
+  
+    transform: scale(1.5);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.social li:hover{
+    transform: scale(1.5) translateY(-15px);
+}
+
+.icon-whatsapp,
+.icon-facebook{
+    color: #fff;
+}
+
