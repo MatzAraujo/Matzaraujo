@@ -70,6 +70,7 @@ header .logo{
     text-transform: uppercase;   
     cursor:pointer;
 }
+
 .container video{
     position: absolute;
     top: 0;
@@ -86,7 +87,7 @@ header .logo{
             /* OVERLAY ANIMATION */
 
 .overlay{
-    /* animation: gradient 10s ease-in-out alternate infinite; */
+     animation: gradient 10s ease-in-out alternate infinite; 
     
     background: linear-gradient(to right,#4568DC,#B06AB3);
     background-size: 300% 300%;    
